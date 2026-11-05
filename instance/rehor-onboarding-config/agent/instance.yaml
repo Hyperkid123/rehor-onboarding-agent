@@ -1,4 +1,7 @@
 workflow: onboarding
+image:
+  repository: quay.io/mmarosi/rehor-agent-dispatcher
+  tag: rehor-233-onboarding-20261105-01
 source: jira
 # Native OpenCode runtime, launched by BOT_EXECUTION_ENGINE=coordinator.
 # Loads core/workflow AGENTS.md plus this profile's agent/AGENTS.md natively.
