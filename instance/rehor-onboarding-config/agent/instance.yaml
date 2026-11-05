@@ -1,7 +1,7 @@
 workflow: onboarding
 image:
   repository: quay.io/mmarosi/rehor-agent-dispatcher
-  tag: rehor-233-onboarding-20261105-01
+  tag: rehor-233-onboarding-20261105-02
 source: jira
 # Native OpenCode runtime, launched by BOT_EXECUTION_ENGINE=coordinator.
 # Loads core/workflow AGENTS.md plus this profile's agent/AGENTS.md natively.
@@ -13,3 +13,10 @@ envs:
   # Keep sentinel for install-envs.sh (build) and entrypoint.sh (runtime):
   # empty envs currently skips installation but runs all runtime preset entrypoints.
   - _none
+preflight:
+  env:
+    BOT_LABEL: rehor-ai-onboarding-bot
+    BOT_INSTANCE_ID: rehor-onboarding-agent-dev
+    BOT_CONFIG_REPO: https://github.com/Hyperkid123/rehor-onboarding-agent.git
+    BOT_CONFIG_PATH: instance/rehor-onboarding-config
+    BOT_EXECUTION_ENGINE: coordinator
